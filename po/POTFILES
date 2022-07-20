@@ -1,0 +1,5 @@
+data/ir.hafeznote.Hafez.appdata.xml.in
+data/ir.hafeznote.Hafez.gschema.xml
+src/application.py
+src/window.py
+src/ui/window.ui
