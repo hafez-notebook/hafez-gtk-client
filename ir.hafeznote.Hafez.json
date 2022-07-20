@@ -30,7 +30,7 @@
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "file:///home/shmf/Projects"
+                    "url" : "https://github.com/hafez-notebook/hafez-gtk-client.git"
                 }
             ]
         }

@@ -50,7 +50,7 @@ class HafezApplication(Adw.Application):
             developer_name='Seyed Hosein Mousavi Fard',
             version='0.0.1',
             comments="Hafez notebook Gtk client (A federated note saving app)",
-            issue_url="https://github.com/hafeznotebook/hafez-gtk-client/issue",
+            issue_url="https://github.com/hafez-notebook/hafez-gtk-client/issues",
             copyright="Seyed Hosein Mousavi Fard",
             license_type=Gtk.License.GPL_3_0,
             developers=['Seyed Hosein Mousavi Fard <shmf1385@protonmail.com>'],
