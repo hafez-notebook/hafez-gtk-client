@@ -2,6 +2,7 @@
 <gresources>
   <gresource prefix="/ir/hafeznote/Hafez">
     <file preprocess="xml-stripblanks">icons/scalable/actions/external-link-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/paper-symbolic.svg</file>
     <file preprocess="xml-stripblanks">ui/window.ui</file>
   </gresource>
 </gresources>

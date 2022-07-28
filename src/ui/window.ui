@@ -12,6 +12,9 @@
         <property name="orientation">vertical</property>
         <child>
           <object class="AdwHeaderBar" id="header_bar">
+                <style>
+                  <class name="flat" />
+                </style>
             <child type="end">
               <object class="GtkMenuButton">
                 <property name="icon-name">open-menu-symbolic</property>
@@ -21,14 +24,47 @@
           </object>
         </child>
         <child>
-          <object class="GtkLabel" id="label">
-            <property name="label" translatable="yes">Hafez Notebook</property>
-            <property name="vexpand">true</property>
-            <attributes>
-              <attribute name="weight" value="bold"/>
-              <attribute name="scale" value="2"/>
-            </attributes>
-          </object>
+         <object class="GtkStack" id="stack">
+          <property name="transition-type">slide-left-right</property>
+          <property name="transition-duration">300</property>
+          <child>
+            <object class="GtkStackPage">
+              <property name="name">notebooks</property>
+              <property name="title">Notebooks</property>
+              <property name="child">
+                <object class="GtkBox">
+                  <child>
+                    <object class="AdwStatusPage" id="notebooks_status">
+                      <property name="vexpand">true</property>
+                      <property name="hexpand">true</property>
+                      <property name="visible">false</property>
+                      <property name="icon-name">paper-symbolic</property>
+                      <property name="title">No notebooks found</property>
+                      <property name="description">Create new notebooks with the button in headerbar</property>
+                    </object>
+                  </child>
+                  <child>
+                    <object class="AdwPreferencesPage">
+                      <property name="hexpand">true</property>
+                      <property name="vexpand">true</property>
+                      <property name="visible">true</property>
+                    </object>
+                  </child>
+                </object>
+              </property>
+            </object>
+          </child>
+          <child>
+            <object class="GtkStackPage">
+              <property name="name">Notes</property>
+              <property name="title">Notes</property>
+              <property name="child">
+                <object class="AdwPreferencesPage">
+                </object>
+              </property>
+            </object>
+          </child>
+         </object>
         </child>
       </object>
     </child>
@@ -42,4 +78,5 @@
     </section>
   </menu>
 </interface>
+
 

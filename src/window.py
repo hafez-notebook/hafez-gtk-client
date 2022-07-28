@@ -26,5 +26,21 @@ from gi.repository import Gtk
 class HafezWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'HafezWindow'
 
+    stack = Gtk.Template.Child()
+    stack_pages = ['notebooks', 'notes']
+    stack_current_page = 'first'
+
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+
+    def next_page(self, button):
+        if self.stack_current_page == self.stack_pages[-1]:
+            return
+        self.stack_current_page = self.stack_pages[self.stack_pages.index(self.stack_current_page) - 1]
+        self.stack.set_visible_child_name(self.stack_current_page)
+
+    def previous_page(self, button):
+        if self.stack_current_page == self.stack_pages[0]:
+            return
+        self.stack_current_page = self.stack_pages[self.stack_pages.index(self.stack_current_page) - 1]
+        self.stack.set_visible_child_name(self.stack_current_page)
